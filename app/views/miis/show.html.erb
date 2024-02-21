@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @mii %>
+
+<div>
+  <%= link_to "Edit this mii", edit_mii_path(@mii) %> |
+  <%= link_to "Back to miis", miis_path %>
+
+  <%= button_to "Destroy this mii", @mii, method: :delete %>
+</div>

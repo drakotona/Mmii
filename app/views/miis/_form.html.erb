@@ -1,0 +1,57 @@
+<%= form_with(model: mii) do |form| %>
+  <% if mii.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(mii.errors.count, "error") %> prohibited this mii from being saved:</h2>
+
+      <ul>
+        <% mii.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :lastname, style: "display: block" %>
+    <%= form.text_field :lastname %>
+  </div>
+
+  <div>
+    <%= form.label :nickname, style: "display: block" %>
+    <%= form.text_field :nickname %>
+  </div>
+
+  <div>
+    <%= form.label :slogan, style: "display: block" %>
+    <%= form.text_area :slogan %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.text_area :image %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :keyword, style: "display: block" %>
+    <%= form.text_field :keyword %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

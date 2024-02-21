@@ -1,0 +1,2 @@
+class Mii < ApplicationRecord
+end
